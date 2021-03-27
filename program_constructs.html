@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>IT 203 Object Oriented Programming</title>
+
+</head>
+<body>
+
+    
+
+ <div class="hero">
+        <!-- NAVIGATION-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.PNG"></a>
+        
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-dark nav-inner">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+           
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Topic
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="fundamentals_of_programming.html">Programming Fundamentals</a>
+                <a class="dropdown-item" href="data_structures.html">Fundamental Data Structures </a>
+                <a class="dropdown-item" href="program_constructs.html">Fundamental Programming Constructs</a>
+                <a class="dropdown-item" href="object_oriented_programming.html">Object-Oriented Programming</a>
+                <a class="dropdown-item" href="alorithm_problem_solving.html">Algorithms and Problem-Solving</a>
+                <a class="dropdown-item" href="event_driven.html">Event-Driven Programming</a>
+             
+            </li>
+            
+          </ul>
+          
+        </div>
+      </nav>
+
+
+      <!-- NAVIGATION-->
+ </div>
+    <div class="container">
+            <h1 ><span class="bracket">{</span> Fundamentals of Program Constructs <span class="bracket">}</span> </h1>
+             
+            Reference: <a href="https://www.bbc.co.uk/bitesize/guides/zh66pbk/revision/6">https://www.bbc.co.uk/bitesize/guides/zh66pbk/revision/6</a>
+            <p>Programs are designed using common building blocks, known as programming constructs. These programming constructs form the basis for all programs.
+
+            <br>
+            There are three basic building blocks to consider:
+         </p>
+            
+                <ul>
+                    <li>sequence is the order in which instructions occur and are processed</li>
+                    <li>selection determines which path a program takes when it is running</li>
+                    <li>iteration is the repeated execution of a section of code when a program is running</li>
+                </ul>
+
+                <p>All programs use one or more of these constructs. The longer and more complex the program, the more these constructs will be used repeatedly.</p>
+                    <hr>
+                <h3>
+                    Sequence
+                </h3>
+                
+                <p>Sequence is the order in which programming statements are executed. Programming statements usually run one after another in order, unless one of the other programming constructs is used. The sequence of a program is extremely important as once these are translated, carrying out instructions in the wrong order leads to a program performing incorrectly.
+                    <br>
+                    In this pseudo-code program, designed to find the average of two whole numbers, the instructions are in in the wrong sequence:
+                </p>
+                    <div class="code">
+                        <code>
+                            total ← 0   <br>
+                            average ← number1/number2 <br>
+                            OUTPUT “Enter the first number” <br>
+                            number1 ← USERINPUT <br>
+                            OUTPUT “Enter the second number” <br>
+                            number2 ← USERINPUT  <br>
+                             OUTPUT "The average is " + average <br>
+                        </code>
+                    </div>
+
+                    <p>Running this program would result in a logic error, because it tries to calculate the average before it knows the values of the numbers.
+
+                        This version has the instructions in the correct sequence:</p>
+
+                        <div class="code">
+                            <code>
+                                total ← 0   <br>
+                                OUTPUT “Enter the first number”<br>
+                                number1 ← USERINPUT<br>
+                                OUTPUT “Enter the second number”<br>
+                                number2 ← USERINPUT<br>
+                                average ← number1/number2<br>
+                                OUTPUT "The average is " + average<br>
+                            </code>
+                        </div>
+
+
+                        <p>
+                            Having statements in the wrong order is one of the simplest, yet most common, logical programming errors. The error occurs no matter which programming language is used.
+                        </p>
+
+                        <hr>
+                        <h3>
+                            Selection
+                        </h3>
+                        <p>Selection is a programming construct where a section of code is run only if a condition is met. In programming, there are occasions when a decision needs to be made. Selection is the process of making a decision. The result of the decision determines which path the program will take next.
+
+                            For example, a program could tell a user whether they are old enough to learn how to drive a car. If the user's age meets the required driving age, the program would follow one path and execute one set of statements. Otherwise, it would follow a different path and execute a different set of statements.</p>
+                            <p>Selection works by testing a condition. The test gives a Boolean result - TRUE or FALSE.
+
+                                In programming, selection is implemented using IF THEN ELSE statements:</p>
+                                <div class="code">
+                                    <code>
+                                        OUTPUT “How old are you?” <br>
+                                        age ← USERINPUT<br>
+                                        IF age > 16 THEN<br>
+                                            OUTPUT "You are old enough to drive a car"<br>
+                                        ELSE<br>
+                                            OUTPUT "Come back when you are older!"<br>
+                                        ENDIF<br>
+                                    </code>
+                                </div>
+
+                                <p>In the above pseudo-code program, the path the program takes depends on the condition. A variable, in this case age, is used to test the condition. <br>
+
+                                    If the value of age is greater than 16, the result of the tested condition is TRUE and the program follows the first path, which follows the statement THEN. This path outputs to the user that they are old enough to drive.<br>
+                                    
+                                    If the value of age is less than 16, the result is FALSE and the program follows the second path, which follows the statement ELSE. This path outputs to the user that they are not yet old enough to drive.<br>
+                                    
+                                    The statement ENDIF ends the selection block.</p>
+
+                                    <hr>
+
+                                    <h3>Definite Iteration</h3>
+                                    <p>There are times when a program needs to repeat certain steps until told otherwise, or until a condition has been met.
+                                        This process is known as iteration.
+                                    
+                                        Iteration is often referred to as looping, since the program ‘loops’ back to an earlier line of code. Iteration is
+                                        also known as repetition.
+                                    
+                                        Iteration allows programmers to simplify a program and make it more efficient . Instead of writing out the same
+                                        lines of code again and again, a programmer can write a section of code once, and ask the program to execute the
+                                        same line repeatedly until no longer needed.
+                                    
+                                        When a program needs to iterate a set number of times, this is known as definite iteration and makes use of a FOR
+                                        loop. A FOR loop uses an extra variable called a loop counter that keeps track of the number of times the loop has
+                                        been run.There are times when a program needs to repeat certain steps until told otherwise, or until a condition has
+                                        been met. This process is known as iteration.
+                                    
+                                        Iteration is often referred to as looping, since the program ‘loops’ back to an earlier line of code. Iteration is
+                                        also known as repetition.
+                                    
+                                        Iteration allows programmers to simplify a program and make it more efficient . Instead of writing out the same
+                                        lines of code again and again, a programmer can write a section of code once, and ask the program to execute the
+                                        same line repeatedly until no longer needed.
+                                    
+                                        When a program needs to iterate a set number of times, this is known as definite iteration and makes use of a FOR
+                                        loop. A FOR loop uses an extra variable called a loop counter that keeps track of the number of times the loop has
+                                        been run.</p>
+
+                                        <p>This program would print a message out six times:</p>
+
+                                        <div class="code">
+                                            <code>
+                                                OUTPUT “Coding is cool” <br>
+                                                OUTPUT “Coding is cool”<br>
+                                                OUTPUT “Coding is cool”<br>
+                                                OUTPUT “Coding is cool”<br>
+                                                OUTPUT “Coding is cool”<br>
+                                                OUTPUT “Coding is cool” <br>
+                                            </code>
+                                        </div>
+
+                                        <p>Definite iteration uses the statements FOR and ENDFOR to determine what code is repeatedly executed and how many times. This program would also print out a message six times:</p>
+
+                                        <div class="code">
+                                            <code>
+                                                FOR count ← 1 TO 6 <br>
+                                                   <span class="indent">a</span> OUTPUT “Coding is cool”<br>
+                                                ENDFOR<br>
+                                            </code>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="footer">
+                    <h4 class="lead"> Disclaimer: <br>
+                        This material is a compilation from different sources. The complier claims no authorship on it. Sources are indecated in the references. Photo are download from the internet and are credited to the Owner. JHCSC-SET shall not be held any responsibility from legal prblems on this material.
+                    </h4>
+                </div>
+    </div> <!--END CONTAINER-->
+
+
+
+
+
+  
+    
+
+
+
+   
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

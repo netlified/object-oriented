@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>IT 203 Object Oriented Programming</title>
+
+</head>
+<body>
+
+    
+
+ <div class="hero">
+        <!-- NAVIGATION-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.PNG"></a>
+        
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-dark nav-inner">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+           
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Topic
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="fundamentals_of_programming.html">Programming Fundamentals</a>
+                <a class="dropdown-item" href="data_structures.html">Fundamental Data Structures </a>
+                <a class="dropdown-item" href="fundamentals_of_programming.html">Fundamental Programming Constructs</a>
+                <a class="dropdown-item" href="object_oriented_programming.html">Object-Oriented Programming</a>
+                <a class="dropdown-item" href="alorithm_problem_solving.html">Algorithms and Problem-Solving</a>
+                <a class="dropdown-item" href="event_driven.html">Event-Driven Programming</a>
+             
+            </li>
+            
+          </ul>
+          
+        </div>
+      </nav>
+
+
+      <!-- NAVIGATION-->
+ </div>
+    <div class="container">
+                <h1 ><span class="bracket">{</span> Fundamentals of Programming <span class="bracket">}</span> </h1>
+
+                    Reference: <a href="https://codeburst.io/fundamentals-of-programming-f804d7cf793e#:~:text=In%20the%20realm%20of%20programming,functions%20to%20generate%20another%20data.
+                    ">https://codeburst.io/fundamentals-of-programming-f804d7cf793e#:~:text=In%20the%20realm%20of%20programming,functions%20to%20generate%20another%20data.
+                </a>
+                <p>
+                    In the realm of programming, the whole field can be simplified by thinking of two main players, the data type (object of study) and the functions (method). The data are objects upon which we operate our functions to generate another data. The dynamics between the data type and functions allow us to solve complex problems in just a few codes.
+                </p>
+
+                <ul>
+                    <li><b>Data type:</b>
+                         a classification of data that determines how the compiler or interpreter will process the data. It defines the allowable operations on the data, the meaning of the data, and how the data can be stored.
+                         <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td> Data Type</td>
+                                        <td> Size </td>
+                                        <td>  Description</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                           byte
+                                        </td>
+                                        <td>1 byte</td>
+                                        <td>Stores whole numbers from -128 to 127</td>
+                                    </tr>
+                                    <tr>
+                                        <td>short</td>
+                                        <td>2 bytes</td>
+                                        <td>Stores whole numbers from -32,768 to 32,767</td>
+                                    </tr>
+                                    <tr>
+                                       <td>int</td>
+                                       <td>4 bytes</td>
+                                       <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                                   </tr>
+   
+                                   <tr>
+                                       <td>long</td>
+                                       <td>8 bytes</td>
+                                       <td>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                                       </tr>
+   
+                                       
+                                   <tr>
+                                       <td>float</td>
+                                       <td>4 bytes</td>
+                                       <td>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+                                       </tr>
+   
+                                       <tr>
+                                           <td>double</td>
+                                           <td>8 bytes</td>
+                                           <td>Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+                                           </tr>
+   
+                                           <tr>
+                                               <td>boolean</td>
+                                               <td>1 bit</td>
+                                               <td>Stores true or false values</td>
+                                               </tr>
+   
+   
+                                               
+                                           <tr>
+                                               <td>char</td>
+                                               <td>2 bytes</td>
+                                               <td>Stores a single character/letter or ASCII values</td>
+                                               </tr>
+      
+                                </tbody>
+                            </table>
+                         </div>
+                    </li>
+                    <li><b>Function:</b>
+                         a clustered sequence of operation to perform a well defined action. Different programming languages uses different terminology for functions: methods, sub-routines, procedures. Function introduces a key concept in programming called scope.
+
+                         <div class="code">
+                             <code>
+                                function do_double($input) { <br>
+                                    $output = $input * 2; //double the input valuev<br>
+                                    echo $output; //print display $output result<br>
+                                }<br>
+                                echo do_double(2);
+                             </code>
+                         </div>
+                    </li>
+                    <li>
+
+                        <b> Dynamics:</b>
+                        the dynamics of data and function is provided by the looping and iteration rules — also referred to as Control Structure. It literally controls the structure of your program. The ‘for’ loop and ‘while’ loop are some example of providing a dynamic to the whole program. These dynamics allow the programming language to solve problems in a faster way. These dynamics provides the ‘DRY’ principle a role in programming.
+
+                        <br>
+                        Let's consider a situation when you want to print Hello, World! five times. Here is a simple C program to do the same −
+                        <br>
+                        <div class="code">
+                            <code>
+                                #include &lt;stdio.h&gt;
+                                    <br>
+                                    int main() { <br>
+                                      <span class="indent">a</span> printf( "Hello, World!\n"); <br>
+                                      <span class="indent">a</span>printf( "Hello, World!\n"); <br>
+                                      <span class="indent">a</span> printf( "Hello, World!\n"); <br>
+                                      <span class="indent">a</span> printf( "Hello, World!\n"); <br>
+                                      <span class="indent">a</span> printf( "Hello, World!\n"); <br>
+                                    } <br>
+                            </code>
+                        </div>
+                        <br>
+                        When the above program is executed, it produces the following result −
+                        <div class="code">
+                            <code>
+                                Hello, World!<br>
+                                Hello, World!<br>
+                                Hello, World!<br>
+                                Hello, World!<br>
+                                Hello, World!<br>
+                            </code>
+                        </div>
+                        <br>
+                        It was simple, but again, let's consider another situation when you want to write Hello, World! a thousand times. We can certainly not write printf() statements a thousand times. Almost all the programming languages provide a concept called loop, which helps in executing one or more statements up to a desired number of times. All high-level programming languages provide various forms of loops, which can be used to execute one or more statements repeatedly.
+                        <br>
+                        Let's write the above C program with the help of a while   loop and later, we will discuss how this loop works
+                        <div class="code">
+                            <code>
+                                #include &lt;stdio.h&gt; <br>
+                                
+                                    int main() {<br>
+                                        <span class="indent">a</span>int i = 0;<br>
+                                       
+                                       while ( i < 5 ) {<br>
+                                        <span class="indent">a</span> printf( "Hello, World!\n");<br>
+                                        <span class="indent">a</span><span class="indent">a</span> i = i + 1;<br>
+                                        <span class="indent">a</span> }<br>
+                                    }<br>
+                            </code>
+                        </div>
+                    </li>
+                    <li>
+                        <b>Programming Paradigms:</b>
+                        
+                        The different language paradigms developed over the years are developed due to the developer’s different mind-set of what to emphasize, data or functions. Object-oriented languages are more inclined to think that everything in the universe is an object. The functional language thinks that everything in the universe is function. The essence of functional programming is that programs are a combination of expression. Expression includes concrete values, variables, and also functions. There are other language paradigms which focus mainly on the dynamics.
+
+                        <img class="img-responsive" src="https://media.geeksforgeeks.org/wp-content/uploads/1-344.png">
+                    </li>
+                </ul>
+
+                <hr>
+                
+                <p>Programming is an increasingly important skill, whether you aspire to a career in software development, or in other fields. This course is the first in the specialization Introduction to Programming in C, but its lessons extend to any language you might want to learn. This is because programming is fundamentally about figuring out how to solve a class of problems and writing the algorithm, a clear set of steps to solve any problem in its class. This course will introduce you to a powerful problem-solving process—the Seven Steps—which you can use to solve any programming problem. In this course, you will learn how to develop an algorithm, then progress to reading code and understanding how programming concepts relate to algorithms.</p>
+
+
+
+        
+
+
+
+                <div class="footer">
+                    <h4 class="lead"> Disclaimer: <br>
+                        This material is a compilation from different sources. The complier claims no authorship on it. Sources are indecated in the references. Photo are download from the internet and are credited to the Owner. JHCSC-SET shall not be held any responsibility from legal prblems on this material.
+                    </h4>
+                </div>
+    </div> <!--END CONTAINER-->
+
+
+
+
+
+  
+    
+
+
+
+   
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

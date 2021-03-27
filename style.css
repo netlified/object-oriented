@@ -1,0 +1,126 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-image: linear-gradient(rgb(80, 183, 224),rgb(31, 169, 224));
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.hero{
+    
+    width: 100vw;
+    background-image: linear-gradient(#0173A7, #1079aa);
+    background-repeat: no-repeat;
+}
+.navbar-bg{
+    
+    background-color: rgba(255, 255, 255, 0.507);
+    background-image: url('/assets/img/bg-img.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-inner{
+    background-color: rgb(14, 13, 13);
+    background-image: url('/assets/img/bg-nav.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-item{
+    margin-right: 50px;
+    font-family: 'Crete Round', serif;
+}
+.dropdown-item{
+    transition: 0.2s ease-in all;
+}
+.dropdown-item:hover{
+    width: 300px;
+    background-color: rgb(206, 204, 204);
+    margin-left: 10px;
+    text-shadow: 2px 2px floralwhite;
+}
+.dropdown-menu{
+    width: 320px;
+}
+.container{
+   
+    
+    padding-top: 10%;
+    color: floralwhite;
+}
+.footer{
+    
+    background-color: black;
+    background-color: rgb(36, 37, 37);
+    color: floralwhite;
+    text-align: center;
+    padding: 50px;
+}
+.btn-custom{
+    background-color: #F89842;
+    color: rgb(47, 47, 231);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 20px;
+    font-weight: 500;
+}
+
+.container p, ul{
+    color: floralwhite;
+    font-size: 150%;
+}
+.container ul li{
+    margin-top: 5%;
+}
+.bracket{
+    color: #F89842;
+    font-size: 150%;
+    text-shadow: 3px 3px black;
+}
+.code{
+    background-color: rgb(36, 37, 37);
+   
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 3px 3px rgb(55, 123, 126);
+}
+code{
+    
+    font-size: 15px;
+    background-color: rgb(36, 37, 37);
+}
+table{
+    background-color: cadetblue !important;
+    font-size: 15px;
+}
+.indent{
+    margin-left: 20px;
+    color: rgb(36, 37, 37);
+}
+
+.container p, ol{
+    color: floralwhite;
+    font-size: 150%;
+}
+
+.container ol,ul{
+    margin-left: 100px;
+
+}
+.container ol li{
+    margin-top: 50px;
+}
+
+hr{
+    margin-bottom: 50px;
+}
+.nav-item{
+    font-size: 15px;
+}
+
+
