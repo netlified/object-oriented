@@ -401,12 +401,293 @@ C:\Users\Your Name>javac Second.java</code>
 </code>
                 </div>
                 
+                <hr>
+                <h2>Java Encapsulation</h2>
+                <p>Encapsulation
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:</p>
+                
+                <ul>
+                    <li>declare class variables/attributes as private </li>
+ <li>provide public get and set methods to access and update the value of a private variable</li>
+                </ul>
+                
+                <h2>Get and Set</h2>
+                <p>
+                    You learned from the previous chapter that private variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public get and set methods.
+<br>
+The get method returns the variable value, and the set method sets the value.
+<br>
+Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:
+                    <br>
+                    Example: 
+                </p>
+                
+                <div class="code">
+                    <code>
+                        public class Person { <br>
+  private String name; // private = restricted access<br>
+
+  // Getter<br>
+  public String getName() {<br>
+    return name;<br>
+  }<br>
+<br>
+  // Setter<br>
+  public void setName(String newName) {<br>
+    this.name = newName;<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                <p>
+                    Example explained <br>
+The get method returns the value of the variable name.<br>
+
+The set method takes a parameter (newName) and assigns it to the name variable. The this keyword is used to refer to the current object.<br>
+
+However, as the name variable is declared as private, we cannot access it from outside this class:</p>
+                
+                <div class="code">
+                    <code>
+                        public class Main { <br>
+  public static void main(String[] args) {<br>
+    Person myObj = new Person();<br>
+    myObj.name = "John";  // error<br>
+    System.out.println(myObj.name); // error <br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                <p>If the variable was declared as public, we would expect the following output:</p>
+                
+                <div class="code">
+                    <code>
+                        John
+                    </code>
+                </div>
+                
+                <p>
+                    However, as we try to access a private variable, we get an error:</p>
+                
+                <div class="code">
+                    <code>
+                        MyClass.java:4: error: name has private access in Person <br>
+    myObj.name = "John"; <br>
+         ^ <br>
+MyClass.java:5: error: name has private access in Person <br>
+    System.out.println(myObj.name); <br>
+                  ^ <br>
+2 errors <br>
+                    </code>
+                </div>
+                
+                <p>Instead, we use the getName() and setName() methods to acccess and update the variable:</p>
+                
+                <h4>Example</h4>
+                
+                <div class="code">
+                    <code>
+                        public class Main { <br>
+  public static void main(String[] args) {<br>
+    Person myObj = new Person();<br>
+    myObj.setName("John"); // Set the value of the name variable to "John"<br>
+    System.out.println(myObj.getName());<br>
+  }<br>
+}<br>
+
+// Outputs "John"<br>
+                    </code>
+                </div>
+                
+                <h2>Why Encapsulation?</h2>
+                
+                <ul>
+                    <li>Better control of class attributes and methods</li>
+                    <li> Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method) </li>
+                    <li>Flexible: the programmer can change one part of the code without affecting other parts</li>
+                    <li>Increased security of data
+                    </li>
+                </ul>
                 
                 
+                <h2>Java Inheritance</h2>
+                <h3>Java Inheritance (Subclass and Superclass)</h3>
+                <p>In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+                    <ul>
+                        <li>subclass (child) - the class that inherits from another class </li>
+<li>superclass (parent) - the class being inherited from</li>
+                </ul>
+                
+                <p>
+                    To inherit from a class, use the extends keyword. <br>
+
+In the example below, the Car class (subclass) inherits the attributes and methods from the Vehicle class (superclass):</p>
+                
+                <div class="code">
+                    
+                    <code>
+                        class Vehicle { <br> 
+  protected String brand = "Ford";        // Vehicle attribute<br> 
+  public void honk() {                    // Vehicle method<br> 
+    System.out.println("Tuut, tuut!");<br> 
+  }<br> 
+}<br> <br> 
+
+class Car extends Vehicle {<br> 
+  private String modelName = "Mustang";    // Car attribute<br> 
+  public static void main(String[] args) {<br> <br> 
+
+    // Create a myCar object<br> 
+    Car myCar = new Car();<br> <br> 
+
+    // Call the honk() method (from the Vehicle class) on the myCar object<br> 
+    myCar.honk();<br> <br> 
+
+    // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class<br> 
+    System.out.println(myCar.brand + " " + myCar.modelName);<br> 
+  }<br> 
+}<br> 
+                    </code>
+                     </div>
+                
+                <hr>
+                <h2>Java Polymorphism</h2>
+                <p>
+                    Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance. <br>
+
+Like we specified in the previous chapter; Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.
+<br>
+For example, think of a superclass called Animal that has a method called animalSound(). Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
+                
+                <div class="code">
+                    <code>
+                        class Animal { <br>
+  public void animalSound() {<br>
+    System.out.println("The animal makes a sound");<br>
+  }<br>
+}<br><br>
+
+class Pig extends Animal {<br>
+  public void animalSound() {<br>
+    System.out.println("The pig says: wee wee");<br>
+  }<br>
+}<br><br>
+
+class Dog extends Animal {<br>
+  public void animalSound() {<br>
+    System.out.println("The dog says: bow wow");<br>
+  }<br>
+}<br>
+                    </code>
+                    
+                </div>
                 
                 
+                <p>Now we can create Pig and Dog objects and call the animalSound() method on both of them:</p>
+                
+                <div class="code">
+                    <code>
+                        
+                        class Animal { <br>
+  public void animalSound() { <br>
+    System.out.println("The animal makes a sound"); <br>
+  } <br>
+}<br><br>
+
+class Pig extends Animal {<br>
+  public void animalSound() {<br>
+    System.out.println("The pig says: wee wee");<br>
+  }<br>
+}<br><br>
+
+class Dog extends Animal {<br>
+  public void animalSound() {<br>
+    System.out.println("The dog says: bow wow");<br>
+  }<br>
+}<br><br>
+
+class Main {<br>
+  public static void main(String[] args) {<br>
+    Animal myAnimal = new Animal();  // Create a Animal object<br>
+    Animal myPig = new Pig();  // Create a Pig object<br>
+    Animal myDog = new Dog();  // Create a Dog object<br>
+    myAnimal.animalSound();<br>
+    myPig.animalSound();<br>
+    myDog.animalSound();<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                <hr>
+                <h2>Java Abstraction</h2>
+                <p>
+                    Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+                    The abstract keyword is a non-access modifier, used for classes and methods:</p>
+                
+                <ul>
+                    <li>Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+                    <li>Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li>
+                </ul>
+                
+                <p>An abstract class can have both abstract and regular methods:</p>
+                <div class="code">
+                    <code>
+                        abstract class Animal { <br>
+  public abstract void animalSound();<br>
+  public void sleep() {<br>
+    System.out.println("Zzz");<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                <p>From the example above, it is not possible to create an object of the Animal class:</p>
+                
+                <div class="code">
+                    <code>
+                        Animal myObj = new Animal(); // will generate an error
+                    </code>
+                </div>
                 
                 
+                <div class="code">
+                    <code>
+                        // Abstract class  <br> 
+abstract class Animal {<br>
+  // Abstract method (does not have a body)<br>
+  public abstract void animalSound();<br>
+  // Regular method<br>
+  public void sleep() {<br>
+    System.out.println("Zzz");<br>
+  }<br>
+}<br><br>
+
+// Subclass (inherit from Animal)<br>
+class Pig extends Animal {<br>
+  public void animalSound() {<br>
+    // The body of animalSound() is provided here<br>
+    System.out.println("The pig says: wee wee");<br>
+  }<br>
+}<br><br>
+
+class Main {<br>
+  public static void main(String[] args) {<br>
+    Pig myPig = new Pig(); // Create a Pig object<br>
+    myPig.animalSound();<br>
+    myPig.sleep();<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                
+                <h3>Why And When To Use Abstract Classes and Methods? <br>
+                    To achieve security - hide certain details and only show the important details of an object.</h3> 
                 
                 
                 
