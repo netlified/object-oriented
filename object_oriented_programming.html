@@ -220,11 +220,208 @@ We can then reuse this class to represent any number of cars.
 
 
 
-                <div class="footer">
+               
+        
+        
+        <h2>Java - What is OOP?</h2>
+        
+        <p>
+        OOP stands for Object-Oriented Programming.
+
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+        </p>
+        <p>Object-oriented programming has several advantages over procedural programming:</p>
+        <ul>
+            <li>OOP is faster and easier to execute</li>
+            <li>OOP provides a clear structure for the programs</li>
+            <li>OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug</li>
+            <li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
+        </ul>
+        
+        <p>
+        Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.</p>
+        <h2>Java - What are Classes and Objects?</h2>
+        <p>
+            
+            Classes and objects are the two main aspects of object-oriented programming.
+
+            Look at the following illustration to see the difference between class and objects:
+        </p>
+        <div class="row">
+            <div class="col-12 col-sm-6" style="text-align:center;">
+                <h4>class <br>
+                    Fruit <h4>
+            </div>
+                     <div class="col-12 col-sm-6" style="text-align:center;">
+                <h4>objects <br>
+Apple<br>
+
+Banana<br>
+
+Mango<br>
+                         </h4>
+            </div>
+        </div>
+                
+                
+                <p>So, a class is a template for objects, and an object is an instance of a class.
+
+When the individual objects are created, they inherit all the variables and methods from the class.
+
+You will learn much more about classes and objects in the next chapter.</p>
+                
+                
+                <h2>Java Classes/Objects</h2>
+                
+                <p>Java is an object-oriented programming language.
+
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+
+                    A Class is like an object constructor, or a "blueprint" for creating objects.</p>
+                
+                
+                
+                <h2>Create a Class</h2>
+                <div class="code">
+                    To create a class, use the keyword class:
+                </div>
+                
+                <h2>Main.java </h2>
+                <p>
+Create a class named "Main" with a variable x:
+                </p>
+                <div class="code">
+                    <code>
+                        public class Main { <br>
+  int x = 5;<br>
+}<br>
+                    </code>
+                </div>
+                
+                <h2>Create an Object</h2>
+                
+                <p>
+                In Java, an object is created from a class. We have already created the class named MyClass, so now we can use this to create objects.
+
+To create an object of MyClass, specify the class name, followed by the object name, and use the keyword new:
+                </p>
+                
+                <p>Example  <br>
+                    Create an object called "myObj" and print the value of x:</p>
+                
+                <div class="code">
+                    <code>
+                    public class Main { <br>
+  int x = 5;<br>
+<br>
+  public static void main(String[] args) {<br>
+    Main myObj = new Main();<br>
+    System.out.println(myObj.x);<br>
+  }<br>
+}</code>
+                </div>
+                
+                <h2>Multiple Objects </h2>
+                <p>
+You can create multiple objects of one class:<br>
+                    Example <br>
+Create two objects of Main:
+                </p>
+                
+                <div class="code">
+                        <code>
+                            public class Main { <br>
+  int x = 5;<br><br>
+
+  public static void main(String[] args) {<br>
+    Main myObj1 = new Main();  // Object 1<br>
+    Main myObj2 = new Main();  // Object 2<br>
+    System.out.println(myObj1.x);<br>
+    System.out.println(myObj2.x);<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                
+                <h2>Using Multiple Classes</h2>
+                <p>You can also create an object of a class and access it in another class. This is often used for better organization of classes (one class has all the attributes and methods, while the other class holds the main() method (code to be executed)).
+
+Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory/folder:</p>
+                <ul>
+                    <li>Main.java </li>
+                    <li> Second.java </li>
+                    </ul>
+                
+                <h2>Main.java</h2>
+                <div class="code">
+                    <code>
+                        public class Main { <br>
+  int x = 5;<br>
+}<br>
+                    </code>
+                </div>
+                
+                
+                <h2>Second.java</h2>
+                <div class="code">
+                    <code>
+                            class Second { <br>
+  public static void main(String[] args) {<br>
+    Main myObj = new Main();<br>
+    System.out.println(myObj.x);<br>
+  }<br>
+}<br>
+                    </code>
+                </div>
+                
+                <p>When both files have been compiled:</p>
+                
+                <div class="code">
+                    <code>
+                    C:\Users\Your Name>javac Main.java <br>
+C:\Users\Your Name>javac Second.java</code>
+                </div>
+                
+                
+                 <p>Run the Second.java file:</p>
+                
+                <div class="code">
+                    <code>
+                    C:\Users\Your Name>java Second
+</code>
+                </div>
+                
+                
+                   <p>And the output will be:</p>
+                
+                <div class="code">
+                    <code>
+                   5
+</code>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                 <div class="footer">
                     <h4 class="lead"> Disclaimer: <br>
                         This material is a compilation from different sources. The complier claims no authorship on it. Sources are indecated in the references. Photo are download from the internet and are credited to the Owner. JHCSC-SET shall not be held any responsibility from legal prblems on this material.
                     </h4>
                 </div>
+                
+    
     </div> <!--END CONTAINER-->
 
 
